@@ -53,6 +53,9 @@
           document.querySelector('.js-theme input').checked = true;
         });
       }
+
+     
+
     </script>
         <!-- help-->
         <div class="help">
@@ -277,6 +280,7 @@
                         <div class="calendar__container js-date-container"></div>
                         <div class="calendar__foot">
                           <button class="button-stroke button-small calendar__button js-date-clear">Clear</button>
+                          <button class="button button-small calendar__button nextTime">Next</button>
                         </div>
                       </div>
                     </div>
@@ -423,6 +427,13 @@
       $(".help__close").click(function(){
         $(".help").removeClass("active");
         $(".help").next().removeClass("active");
+      });
+
+      $(".nextTime").click(function(){
+        $(".calendar__item_date").removeClass("active").next().addClass("active");
+      });
+      $(".calendar__time li").click(function(){
+        $(".calendar__item_time").removeClass("active");
       });
 
 
